@@ -4,7 +4,7 @@ swag_tags <- function(g) {
     for (op in names(g$paths[[ops]])) {
 
       node <- g$paths[[ops]][[op]]
-      fil <- paste(myg$RSWAG$pkg_dir, "R", sprintf("%s.r", node$operationId), sep="/")
+      fil <- paste(g$RSWAG$pkg_dir, "R", sprintf("%s.r", node$operationId), sep="/")
       message(sprintf("  - creating %s...", fil))
 
       cat("# Generaged with swagger: edits may be overwritten if you re-generate the package\n\n", file=fil)
